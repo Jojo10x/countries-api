@@ -1,0 +1,104 @@
+.card {
+    background-color: var(--element);
+    border-radius: 7px;
+    box-shadow: 0 0 7px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    height: 22rem;
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card-flag-container {
+    align-items: center;
+    height: 50%;
+}
+
+.card-flag {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    line-height: 1rem;
+    padding: 1.5rem;
+}
+
+.card-info h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.card-info p {
+    font-size: .875rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.card-info span {
+    font-weight: 400;
+}
+
+@media screen and (max-width: 547px) {
+    .card {
+        max-width: 18rem;
+    }
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.region-select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    appearance: none; 
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23999" d="M2 0L0 2h4zM0 3l2 2 2-2z"/></svg>') no-repeat right 10px center;
+    background-color: #fff;
+    background-size: 10px;
+}
+
+.region-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.region-select option {
+    padding: 10px;
+    background-color: #fff;
+}
+
+.switch{
+  cursor: pointer;
+  text-transform: uppercase;
+}

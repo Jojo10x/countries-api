@@ -1,0 +1,127 @@
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --background: hsl(0, 0%, 98%);
+    --element: hsl(0, 0%, 100%);
+    --input: hsl(0, 0%, 52%);
+    --shadow: hsl(0, 0%, 52%);
+    --text: hsl(200, 15%, 8%);
+    --white: hsl(0, 0%, 100%);
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background: hsl(207, 26%, 17%);
+    --element: hsl(209, 23%, 22%);
+    --input: hsl(0, 0%, 100%);
+    --text: hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
+  }
+}
+
+[data-theme="dark"] {
+    --background: hsl(207, 26%, 17%);
+    --element: hsl(209, 23%, 22%);
+    --input: hsl(0, 0%, 100%);
+    --text: hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Common styles */
+header {
+    align-items: baseline;
+    background-color: var(--element);
+    border-bottom: 3px solid var(--background);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    min-width: 10rem;
+    padding: 1rem 0 0 10rem;
+}
+
+.switch {
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    min-width: 10rem;
+    padding: 1rem 10rem 0 0;
+    text-align: end;
+}
+
+main {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 10rem;
+}
+
+.bars {
+    display: flex;
+    justify-content: space-between;
+}
+
+#search {
+    background-color: var(--element);
+    border-radius: var(--border-radius);
+    display: flex;
+    width: 29.5rem;
+}
+
+.bars input::placeholder {
+    color: var(--input);
+}
+
+.bars input:focus::placeholder {
+    color: transparent;
+}
+
+#filter {
+    background-color: var(--element);
+    color: var(--input);
+    display: flex;
+    font-size: .875rem;
+    width: 11.5rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-gap: 4.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    margin-top: 2.2rem;
+    padding: 0;
+    width: 100%;
+}
+
+/* Media query */
+@media screen and (max-width: 980px) {
+    .bars {
+        flex-direction: column;
+    }
+    #search {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .title {
+        font-size: 1.1rem;
+        padding: 2.5rem 0 0 2rem;
+    }
+    .switch {
+        font-size: .8rem;
+        padding: 2.5rem 2rem 0 0;
+    }
+    main {
+        padding: 1rem 2rem;
+    }
+    .bars {
+        width: 100%;
+    }
+    .cards-grid {
+        padding: 0;
+    }
+}
